@@ -1,138 +1,90 @@
 <div align="center">
 
-# Guiker Mobile App
+# Abrigo FrontEnd Web Application
 
 [![pipeline status](https://gitlab.com/guiker-dev/mobile-app/badges/master/pipeline.svg?style=flat-square)](https://gitlab.com/guiker-dev/mobile-app/commits/master)
 [![coverage report](https://gitlab.com/guiker-dev/mobile-app/badges/master/coverage.svg?style=flat-square)](https://gitlab.com/guiker-dev/mobile-app/commits/master)
 
-Guiker's iOS & Android Mobile App.
-Written in React Native & Expo.
+Abrigo Web Application
+Written in React.
 
 </div>
 
 ## 🧰 Tech Stack
 
 - [TypeScript](https://www.typescriptlang.org/docs/home.html)
-- [React Native](https://facebook.github.io/react-native/)
-- [Expo](https://expo.io/)
-- [Easy Peasy](https://easy-peasy.now.sh/) - Redux wrapper
-- [React Navigation](https://reactnavigation.org/)
-- [Yup](https://github.com/jquense/yup)
+- [React](https://reactjs.org)
+- [Easy Peasy](https://easy-peasy.now.sh/) - Redux wrapper or
+- [Redux](https://redux.js.org) - for state management
+- [CSS] - for styling
+- [SCSS](https://sass-lang.com) -for styling
+- [Yup](https://github.com/jquense/yup) - for Authentication
 - [Sentry](https://sentry.io/organizations/guiker/issues/?project=1526634)
-- [Jest](https://jestjs.io/en/)
-- [Nock](https://github.com/nock/nock)
-- [React Native Testing Library](https://github.com/callstack/react-native-testing-library)
-- [React Native Debugger](https://github.com/jhen0409/react-native-debugger)
+- [Jest](https://jestjs.io/en/) - for Testing
+- [Nock](https://github.com/nock/nock) - for Mocking HTTP request
+- [React Testing Library](https://github.com/testing-library/react-testing-library)
+- [React Dev Tool](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en)
+- [Redux Dev Tool](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en)
+- [yarn](https://yarnpkg.com/lang/en/)
 - [Prettier](https://prettier.io/)
 - [TSLint](https://palantir.github.io/tslint/)
+- [Asana](https://asana.com) -for work space
+- [Figma](https://www.figma.com) -for design
+- [Slack](https://slack.com/intl/en-ca/) -for communication
 
 ## 💻 Dev Setup
 
-**Install Expo CLI & project dependencies**
+**Install React**
 
 ```shell
-$ npm i -g expo-cli
+$ yarn create react-app my-app
 
-$ npm i
+$ yarn
 ```
-
-**Install iOS Simulator**
-
-Follow these very simple installation [instructions from the Expo docs](https://docs.expo.io/versions/latest/workflow/ios-simulator/#__next).
-
-**Install Android Studio Emulator**
-
-Follow these installation [instructions from the Expo docs](https://docs.expo.io/versions/v33.0.0/workflow/android-studio-emulator/#__next).
-
-**Install the Expo Client on your phone**
-
-In order to preview the app on your phone, download the **Expo Client** from the App Store or Google Play.
-
-When you are ready to test, follow these [instructions to open the app on your phone](https://docs.expo.io/versions/v33.0.0/workflow/up-and-running/#open-the-app-on-your-phone-or).
 
 ## 🕹️ Commands
 
-Run with live reloading on Expo App (iOS & Android)
+Run with live reloading on Web Browser
 
 ```shell
-$ npm start
-```
-
-Run and open on iOS Simulator
-
-```shell
-$ npm run ios
-```
-
-Run and open on Android Emulator
-
-```shell
-$ npm run android
-```
-
-Open React Native Debugger and start Expo (please refer to: [React Native Debugger](#react-native-debugger))
-
-```shell
-$ npm run debug
+$ yarn start
 ```
 
 Run tests in watch mode (Jest)
 
 ```shell
-$ npm test
+$ yarn test
 ```
 
 Compile code (TypeScript)
 
 ```shell
-$ npm run compile
+$ yarn run compile
 ```
 
 Compile code in watch mode
 
 ```shell
-$ npm run compile-watch
+$ yarn run compile-watch
 ```
 
 Format code
 
 ```shell
-$ npm run format
+$ yarn run format
 ```
 
 Linter
 
 ```shell
-$ npm run lint
+$ yarn run lint
 ```
 
 Validate (lint, compile, format-checking, and test-coverage in one cmd)
 
 ```shell
-$ npm run validate
+$ yarn run validate
 ```
-
-<a name="react-native-debugger">
-
-## 🐛 React Native Debugger
-
-</a>
-
-To debug the app, you can use the awesome standalone [React Native Debugger](https://github.com/jhen0409/react-native-debugger) (macOS only).
-
-Install
-
-```shell
-$ brew update && brew cask install react-native-debugger
-```
-
-Open Debugger & run the app
-
-```shell
-$ npm run debug
-```
-
-> _Note: Make sure you enable Remote debugging in the developer menu of the Expo_ Client App
 
 ## 📔 Contribution Guide
 
@@ -143,6 +95,8 @@ Our goal is to maintain a strategy that allows us to continuously deploy feature
 During the early stages of this project, we will use a variation of [GitHub Flow](https://guides.github.com/introduction/flow/): we deploy from master automatically to staging, instead of deploying from feature branch to production.
 
 To summarize:
+
+**Very Very Important**
 
 - Always start your work (feature) by branching off `master`.
 - Bugfixes and Hotfixes should also be branched out from `master`.
@@ -160,8 +114,8 @@ To summarize:
 
 To avoid having to run the CI build more than needed, run these commands before you push your code:
 
-- Format ( `npm run format` )
-- Validate ( `npm run validate`)
+- Format ( `yarn run format` )
+- Validate ( `yarn run validate`)
 
 Now you can push at ease 😎
 
